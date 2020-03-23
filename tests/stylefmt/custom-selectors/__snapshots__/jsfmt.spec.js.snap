@@ -18,12 +18,8 @@ printWidth: 80
 @custom-selector :--button button, .button;
 @custom-selector :--enter :hover, :focus;
 
-:--button {
-  display: inline-block;
-}
-:--button:--enter {
-  text-decoration: underline;
-}
+:--button { display: inline-block; }
+:--button:--enter { text-decoration: underline; }
 
 ================================================================================
 `;

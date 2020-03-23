@@ -73,18 +73,12 @@ printWidth: 80
   color: yellow;
 }
 
-.otherClassName {
-  composes: className from "./style.css";
-}
+.otherClassName { composes: className from "./style.css"; }
 
-.otherClassName {
-  composes: globalClassName from global;
-}
+.otherClassName { composes: globalClassName from global; }
 
 :global {
-  .global-class-name {
-    color: green;
-  }
+  .global-class-name { color: green; }
 }
 
 .root :global .text {
@@ -94,12 +88,8 @@ printWidth: 80
   font-weight: 600;
 }
 
-:import("path/to/dep.css") {
-  localAlias: keyFromDep;
-}
-:export {
-  exportedKey: exportedValue;
-}
+:import("path/to/dep.css") { localAlias: keyFromDep; }
+:export { exportedKey: exportedValue; }
 
 ================================================================================
 `;

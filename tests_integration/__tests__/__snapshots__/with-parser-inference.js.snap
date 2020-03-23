@@ -6,9 +6,7 @@ exports[`infers postcss parser (stdout) 1`] = `
 "/* JavaScript */
 \\"use strict\\";
 /* Stylesheet */
-* {
-  outline: none;
-}
+* { outline: none; }
 "
 `;
 

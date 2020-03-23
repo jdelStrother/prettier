@@ -14,13 +14,9 @@ printWidth: 80
   color: silver}
 
 =====================================output=====================================
-[data-sizes~="m:0"] {
-  color: pink;
-}
+[data-sizes~="m:0"] { color: pink; }
 
-[class*="test"] {
-  color: silver;
-}
+[class*="test"] { color: silver; }
 
 ================================================================================
 `;

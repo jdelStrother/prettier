@@ -42,8 +42,7 @@ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15),
 }
 
 =====================================output=====================================
-a {
-  @include section-type-1(
+a { @include section-type-1(
     $header: (
       margin: 0 0 $margin-base,
       text-align: left
@@ -61,17 +60,14 @@ a {
       font-weight: false,
       line-height: $line-height-h3
     )
-  );
-}
+  ); }
 
-a {
-  @include item-spotlight-properties-transition(
+a { @include item-spotlight-properties-transition(
     "-title",
     (
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15)
     )
-  );
-}
+  ); }
 
 ================================================================================
 `;
@@ -117,8 +113,7 @@ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15),
 }
 
 =====================================output=====================================
-a {
-  @include section-type-1(
+a { @include section-type-1(
     $header: (
       margin: 0 0 $margin-base,
       text-align: left,
@@ -136,17 +131,14 @@ a {
       font-weight: false,
       line-height: $line-height-h3,
     )
-  );
-}
+  ); }
 
-a {
-  @include item-spotlight-properties-transition(
+a { @include item-spotlight-properties-transition(
     "-title",
     (
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15),
     )
-  );
-}
+  ); }
 
 ================================================================================
 `;
@@ -163,9 +155,7 @@ a {
 }
 
 =====================================output=====================================
-a {
-  margin: $bar;
-}
+a { margin: $bar; }
 
 ================================================================================
 `;
@@ -181,9 +171,7 @@ a {
 }
 
 =====================================output=====================================
-a {
-  margin: $bar;
-}
+a { margin: $bar; }
 
 ================================================================================
 `;
@@ -508,13 +496,10 @@ asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsj
 
 =====================================output=====================================
 asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm,
-asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm {
-}
+asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm { }
 
 .some-class {
-  &.another-class {
-    color: red;
-  }
+  &.another-class { color: red; }
 }
 
 ================================================================================
@@ -539,13 +524,10 @@ asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsj
 
 =====================================output=====================================
 asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm,
-asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm {
-}
+asdasldaskdhjkashdahsdkjahskdjhakjsdkjahsdhkasdhkajsdhakjsdhkajsdhjkahskjdkjahsjkdjkakjsdm { }
 
 .some-class {
-  &.another-class {
-    color: red;
-  }
+  &.another-class { color: red; }
 }
 
 ================================================================================

@@ -1770,13 +1770,9 @@ label {
 @nice-blue: #5b83ad;
 @light-blue: @nice-blue + #111;
 
-#header {
-  color: @light-blue;
-}
+#header { color: @light-blue; }
 
-#header {
-  color: #6c94be;
-}
+#header { color: #6c94be; }
 
 .bordered {
   border-top: dotted 1px black;
@@ -1793,24 +1789,14 @@ label {
   .bordered;
 }
 
-#header {
-  color: black;
-}
-#header .navigation {
-  font-size: 12px;
-}
-#header .logo {
-  width: 300px;
-}
+#header { color: black; }
+#header .navigation { font-size: 12px; }
+#header .logo { width: 300px; }
 
 #header {
   color: black;
-  .navigation {
-    font-size: 12px;
-  }
-  .logo {
-    width: 300px;
-  }
+  .navigation { font-size: 12px; }
+  .logo { width: 300px; }
 }
 
 .clearfix {
@@ -1840,19 +1826,13 @@ label {
 }
 
 @media screen {
-  .screen-color {
-    color: green;
-  }
+  .screen-color { color: green; }
 }
 @media screen and (min-width: 768px) {
-  .screen-color {
-    color: red;
-  }
+  .screen-color { color: red; }
 }
 @media tv {
-  .screen-color {
-    color: black;
-  }
+  .screen-color { color: black; }
 }
 
 #a {
@@ -1863,15 +1843,11 @@ label {
   padding: 2 2 2 2;
 }
 
-#a {
-  color: blue;
-}
+#a { color: blue; }
 @font-face {
   src: made-up-url;
 }
-#a {
-  padding: 2 2 2 2;
-}
+#a { padding: 2 2 2 2; }
 
 // numbers are converted into the same units
 @conversion-1: 5cm + 10mm; // result is 6cm
@@ -1890,9 +1866,7 @@ label {
 @color: #224488 / 2; //results in #112244
 background-color: #112244 + #111; // result is #223355
 
-.weird-element {
-  content: ~"^//* some horrible but needed css hack";
-}
+.weird-element { content: ~"^//* some horrible but needed css hack"; }
 
 @base: #f04615;
 @width: 0.5;
@@ -1908,16 +1882,10 @@ background-color: #112244 + #111; // result is #223355
     display: block;
     border: 1px solid black;
     background-color: grey;
-    &:hover {
-      background-color: white;
-    }
+    &:hover { background-color: white; }
   }
-  .tab {
-    /* ... */
-  }
-  .citation {
-    /* ... */
-  }
+  .tab { /* ... */ }
+  .citation { /* ... */ }
 }
 
 #header a {
@@ -1954,9 +1922,7 @@ style comment! */
 @import "typo.css";
 
 a,
-.link {
-  color: #428bca;
-}
+.link { color: #428bca; }
 .widget {
   color: #fff;
   background: #428bca;
@@ -1968,12 +1934,8 @@ a,
 
 // Usage
 a,
-.link {
-  color: @link-color;
-}
-a:hover {
-  color: @link-color-hover;
-}
+.link { color: @link-color; }
+a:hover { color: @link-color-hover; }
 .widget {
   color: #fff;
   background: @link-color;
@@ -2028,9 +1990,7 @@ content: @@var;
 
 content: "I am fnord.";
 
-.lazy-eval {
-  width: @var;
-}
+.lazy-eval { width: @var; }
 
 @var: @a;
 @a: 9%;
@@ -2043,9 +2003,7 @@ content: "I am fnord.";
 @var: @a;
 @a: 100%;
 
-.lazy-eval-scope {
-  width: 9%;
-}
+.lazy-eval-scope { width: 9%; }
 
 @var: 0;
 .class {
@@ -2058,12 +2016,8 @@ content: "I am fnord.";
   one: @var;
 }
 
-.class {
-  one: 1;
-}
-.class .brass {
-  three: 3;
-}
+.class { one: 1; }
+.class .brass { three: 3; }
 
 // library
 @base-color: green;
@@ -2082,25 +2036,16 @@ nav ul {
   &:extend(.inline);
   background: blue;
 }
-.inline {
-  color: red;
-}
+.inline { color: red; }
 
-nav ul {
-  background: blue;
-}
+nav ul { background: blue; }
 .inline,
-nav ul {
-  color: red;
-}
+nav ul { color: red; }
 
-.a:extend(.b) {
-}
+.a:extend(.b) { }
 
 // the above block does the same thing as the below block
-.a {
-  &:extend(.b);
-}
+.a { &:extend(.b); }
 
 .c:extend(.d all) {
   // extends all instances of ".d" e.g. ".x.d" or ".d.x"
@@ -2109,14 +2054,11 @@ nav ul {
   // extends only instances where the selector will be output as just ".d"
 }
 
-.e:extend(.f) {
-}
-.e:extend(.g) {
-}
+.e:extend(.f) { }
+.e:extend(.g) { }
 
 // the above an the below do the same thing
-.e:extend(.f, .g) {
-}
+.e:extend(.f, .g) { }
 
 .big-division,
 .big-bag:extend(.bag),
@@ -2125,13 +2067,10 @@ nav ul {
 }
 
 pre:hover,
-.some-class {
-  &:extend(div pre);
-}
+.some-class { &:extend(div pre); }
 
 pre:hover:extend(div pre),
-.some-class:extend(div pre) {
-}
+.some-class:extend(div pre) { }
 
 .bucket {
   tr {
@@ -2139,13 +2078,10 @@ pre:hover:extend(div pre),
     color: blue;
   }
 }
-.some-class:extend(.bucket tr) {
-} // nested ruleset is recognized
+.some-class:extend(.bucket tr) { } // nested ruleset is recognized
 
 .bucket tr,
-.some-class {
-  color: blue;
-}
+.some-class { color: blue; }
 
 .bucket {
   tr & {
@@ -2153,148 +2089,91 @@ pre:hover:extend(div pre),
     color: blue;
   }
 }
-.some-class:extend(tr .bucket) {
-} // nested ruleset is recognized
+.some-class:extend(tr .bucket) { } // nested ruleset is recognized
 
 tr .bucket,
-.some-class {
-  color: blue;
-}
+.some-class { color: blue; }
 
 .a.class,
 .class.a,
-.class > .a {
-  color: blue;
-}
-.test:extend(.class) {
-} // this will NOT match the any selectors above
+.class > .a { color: blue; }
+.test:extend(.class) { } // this will NOT match the any selectors above
 
-*.class {
-  color: blue;
-}
-.noStar:extend(.class) {
-} // this will NOT match the *.class selector
+*.class { color: blue; }
+.noStar:extend(.class) { } // this will NOT match the *.class selector
 
-*.class {
-  color: blue;
-}
+*.class { color: blue; }
 
-link:hover:visited {
-  color: blue;
-}
-.selector:extend(link:visited:hover) {
-}
+link:hover:visited { color: blue; }
+.selector:extend(link:visited:hover) { }
 
-link:hover:visited {
-  color: blue;
-}
+link:hover:visited { color: blue; }
 
-:nth-child(1n + 3) {
-  color: blue;
-}
-.child:extend(:nth-child(n + 3)) {
-}
+:nth-child(1n + 3) { color: blue; }
+.child:extend(:nth-child(n + 3)) { }
 
-:nth-child(1n + 3) {
-  color: blue;
-}
+:nth-child(1n + 3) { color: blue; }
 
-[title="identifier"] {
-  color: blue;
-}
-[title="identifier"] {
-  color: blue;
-}
-[title="identifier"] {
-  color: blue;
-}
+[title="identifier"] { color: blue; }
+[title="identifier"] { color: blue; }
+[title="identifier"] { color: blue; }
 
-.noQuote:extend([title="identifier"]) {
-}
-.singleQuote:extend([title="identifier"]) {
-}
-.doubleQuote:extend([title="identifier"]) {
-}
+.noQuote:extend([title="identifier"]) { }
+.singleQuote:extend([title="identifier"]) { }
+.doubleQuote:extend([title="identifier"]) { }
 
 [title="identifier"],
 .noQuote,
 .singleQuote,
-.doubleQuote {
-  color: blue;
-}
+.doubleQuote { color: blue; }
 
 [title="identifier"],
 .noQuote,
 .singleQuote,
-.doubleQuote {
-  color: blue;
-}
+.doubleQuote { color: blue; }
 
 [title="identifier"],
 .noQuote,
 .singleQuote,
-.doubleQuote {
-  color: blue;
-}
+.doubleQuote { color: blue; }
 
 .a.b.test,
-.test.c {
-  color: orange;
-}
+.test.c { color: orange; }
 .test {
-  &:hover {
-    color: green;
-  }
+  &:hover { color: green; }
 }
 
-.replacement:extend(.test all) {
-}
+.replacement:extend(.test all) { }
 
 .a.b.test,
 .test.c,
 .a.b.replacement,
-.replacement.c {
-  color: orange;
-}
+.replacement.c { color: orange; }
 .test:hover,
-.replacement:hover {
-  color: green;
-}
+.replacement:hover { color: green; }
 
 @variable: .bucket;
 @{variable} {
   // interpolated selector
   color: blue;
 }
-.some-class:extend(.bucket) {
-} // does nothing, no match is found
+.some-class:extend(.bucket) { } // does nothing, no match is found
 
-.bucket {
-  color: blue;
-}
-.some-class:extend(@{variable}) {
-} // interpolated selector matches nothing
+.bucket { color: blue; }
+.some-class:extend(@{variable}) { } // interpolated selector matches nothing
 @variable: .bucket;
 
-.bucket {
-  color: blue;
-}
+.bucket { color: blue; }
 
-.bucket {
-  color: blue;
-}
-@{variable}:extend(.bucket) {
-}
+.bucket { color: blue; }
+@{variable}:extend(.bucket) { }
 @variable: .selector;
 
 .bucket,
-.selector {
-  color: blue;
-}
+.selector { color: blue; }
 
 @media print {
-  .screenClass:extend(.selector) {
-  } // extend inside media
+  .screenClass:extend(.selector) { } // extend inside media
   .selector {
     // this will be matched - it is in the same media
     color: black;
@@ -2330,8 +2209,7 @@ link:hover:visited {
 }
 
 @media screen {
-  .screenClass:extend(.selector) {
-  } // extend inside media
+  .screenClass:extend(.selector) { } // extend inside media
   @media (min-width: 1023px) {
     .selector {
       // ruleset inside nested media - extend ignores it
@@ -2360,8 +2238,7 @@ link:hover:visited {
   }
 }
 
-.topLevel:extend(.selector) {
-} /* top level extend matches everything */
+.topLevel:extend(.selector) { } /* top level extend matches everything */
 
 @media screen {
   .selector,
@@ -2379,19 +2256,14 @@ link:hover:visited {
 }
 
 .alert-info,
-.widget {
-  /* declarations */
-}
+.widget { /* declarations */ }
 
-.alert:extend(.alert-info, .widget) {
-}
+.alert:extend(.alert-info, .widget) { }
 
 .alert-info,
 .widget,
 .alert,
-.alert {
-  /* declarations */
-}
+.alert { /* declarations */ }
 
 .animal {
   background-color: black;
@@ -2402,9 +2274,7 @@ link:hover:visited {
   background-color: black;
   color: white;
 }
-.bear {
-  background-color: brown;
-}
+.bear { background-color: brown; }
 
 .animal {
   background-color: black;
@@ -2419,12 +2289,8 @@ link:hover:visited {
   display: inline-block;
   font-size: 0;
 }
-.thing1 {
-  .my-inline-block;
-}
-.thing2 {
-  .my-inline-block;
-}
+.thing1 { .my-inline-block; }
+.thing2 { .my-inline-block; }
 
 .thing1 {
   display: inline-block;
@@ -2439,12 +2305,8 @@ link:hover:visited {
   display: inline-block;
   font-size: 0;
 }
-.thing1 {
-  &:extend(.my-inline-block);
-}
-.thing2 {
-  &:extend(.my-inline-block);
-}
+.thing1 { &:extend(.my-inline-block); }
+.thing2 { &:extend(.my-inline-block); }
 
 .my-inline-block,
 .thing1,
@@ -2461,72 +2323,44 @@ button.list-style {
 }
 
 .a,
-#b {
-  color: red;
-}
-.mixin-class {
-  .a();
-}
-.mixin-id {
-  #b();
-}
+#b { color: red; }
+.mixin-class { .a(); }
+.mixin-id { #b(); }
 
 .a,
-#b {
-  color: red;
-}
-.mixin-class {
-  color: red;
-}
-.mixin-id {
-  color: red;
-}
+#b { color: red; }
+.mixin-class { color: red; }
+.mixin-id { color: red; }
 
 // these two statements do the same thing:
 .a();
 .a;
 
-.my-mixin {
-  color: black;
-}
-.my-other-mixin() {
-  background: white;
-}
+.my-mixin { color: black; }
+.my-other-mixin() { background: white; }
 .class {
   .my-mixin;
   .my-other-mixin;
 }
 
-.my-mixin {
-  color: black;
-}
+.my-mixin { color: black; }
 .class {
   color: black;
   background: white;
 }
 
 .my-hover-mixin() {
-  &:hover {
-    border: 1px solid red;
-  }
+  &:hover { border: 1px solid red; }
 }
-button {
-  .my-hover-mixin();
-}
+button { .my-hover-mixin(); }
 
-button:hover {
-  border: 1px solid red;
-}
+button:hover { border: 1px solid red; }
 
 #outer {
-  .inner {
-    color: red;
-  }
+  .inner { color: red; }
 }
 
-.c {
-  #outer > .inner;
-}
+.c { #outer > .inner; }
 
 // all do the same thing
 #outer > .inner;
@@ -2537,32 +2371,22 @@ button:hover {
 #outer.inner();
 
 #my-library {
-  .my-mixin() {
-    color: black;
-  }
+  .my-mixin() { color: black; }
 }
 // which can be used like this
-.class {
-  #my-library > .my-mixin();
-}
+.class { #my-library > .my-mixin(); }
 
 #namespace when (@mode=huge) {
-  .mixin() {
-    /* */
-  }
+  .mixin() { /* */ }
 }
 
 #namespace {
-  .mixin() when (@mode=huge) {
-    /* */
-  }
+  .mixin() when (@mode=huge) { /* */ }
 }
 
 #sp_1 when (default()) {
   #sp_2 when (default()) {
-    .mixin() when not(default()) {
-      /* */
-    }
+    .mixin() when not(default()) { /* */ }
   }
 }
 
@@ -2570,12 +2394,8 @@ button:hover {
   background: @bg;
   color: @color;
 }
-.unimportant {
-  .foo();
-}
-.important {
-  .foo() !important;
-}
+.unimportant { .foo(); }
+.important { .foo() !important; }
 
 .unimportant {
   background: #f5f5f5;
@@ -2592,12 +2412,8 @@ button:hover {
   border-radius: @radius;
 }
 
-#header {
-  .border-radius(4px);
-}
-.button {
-  .border-radius(6px);
-}
+#header { .border-radius(4px); }
+.button { .border-radius(6px); }
 
 .border-radius(@radius: 5px) {
   -webkit-border-radius: @radius;
@@ -2605,9 +2421,7 @@ button:hover {
   border-radius: @radius;
 }
 
-#header {
-  .border-radius;
-}
+#header { .border-radius; }
 
 .wrap() {
   text-wrap: wrap;
@@ -2616,9 +2430,7 @@ button:hover {
   word-wrap: break-word;
 }
 
-pre {
-  .wrap;
-}
+pre { .wrap; }
 
 pre {
   text-wrap: wrap;
@@ -2627,9 +2439,7 @@ pre {
   word-wrap: break-word;
 }
 
-.mixin(@color) {
-  color-1: @color;
-}
+.mixin(@color) { color-1: @color; }
 .mixin(@color; @padding: 2) {
   color-2: @color;
   padding-2: @padding;
@@ -2639,9 +2449,7 @@ pre {
   padding-3: @padding;
   margin: @margin @margin @margin @margin;
 }
-.some .selector div {
-  .mixin(#008000);
-}
+.some .selector div { .mixin(#008000); }
 
 .some .selector div {
   color-1: #008000;
@@ -2654,12 +2462,8 @@ pre {
   margin: @margin;
   padding: @padding;
 }
-.class1 {
-  .mixin(@margin: 20px; @color: #33acfe);
-}
-.class2 {
-  .mixin(#efca44; @padding: 40px);
-}
+.class1 { .mixin(@margin: 20px; @color: #33acfe); }
+.class2 { .mixin(#efca44; @padding: 40px); }
 
 .class1 {
   color: #33acfe;
@@ -2677,9 +2481,7 @@ pre {
   -moz-box-shadow: @arguments;
   box-shadow: @arguments;
 }
-.big-block {
-  .box-shadow(2px; 5px);
-}
+.big-block { .box-shadow(2px; 5px); }
 
 .big-block {
   -webkit-box-shadow: 2px 5px 1px #000;
@@ -2687,57 +2489,36 @@ pre {
   box-shadow: 2px 5px 1px #000;
 }
 
-.mixin(/* ... */) {
-} // matches 0-N arguments
-.mixin() {
-} // matches exactly 0 arguments
-.mixin(@a: 1) {
-} // matches 0-1 arguments
-.mixin(@a: 1; /* ... */) {
-} // matches 0-N arguments
-.mixin(@a; /* ... */) {
-} // matches 1-N arguments
+.mixin(/* ... */) { } // matches 0-N arguments
+.mixin() { } // matches exactly 0 arguments
+.mixin(@a: 1) { } // matches 0-1 arguments
+.mixin(@a: 1; /* ... */) { } // matches 0-N arguments
+.mixin(@a; /* ... */) { } // matches 1-N arguments
 
 .mixin(@a; @rest...) {
   // @rest is bound to arguments after @a
   // @arguments is bound to all arguments
 }
 
-.mixin(@s; @color) {
-  /* ... */
-}
+.mixin(@s; @color) { /* ... */ }
 
-.class {
-  .mixin(@switch; #888);
-}
+.class { .mixin(@switch; #888); }
 
-.mixin(dark; @color) {
-  color: darken(@color, 10%);
-}
-.mixin(light; @color) {
-  color: lighten(@color, 10%);
-}
-.mixin(@_; @color) {
-  display: block;
-}
+.mixin(dark; @color) { color: darken(@color, 10%); }
+.mixin(light; @color) { color: lighten(@color, 10%); }
+.mixin(@_; @color) { display: block; }
 
 @switch: light;
 
-.class {
-  .mixin(@switch; #888);
-}
+.class { .mixin(@switch; #888); }
 
 .class {
   color: #a2a2a2;
   display: block;
 }
 
-.mixin(@a) {
-  color: @a;
-}
-.mixin(@a; @b) {
-  color: fade(@a; @b);
-}
+.mixin(@a) { color: @a; }
+.mixin(@a; @b) { color: fade(@a; @b); }
 
 .mixin() {
   @width: 100%;
@@ -2755,18 +2536,14 @@ pre {
   height: 200px;
 }
 
-.average(@x, @y) {
-  @average: ((@x + @y) / 2);
-}
+.average(@x, @y) { @average: ((@x + @y) / 2); }
 
 div {
   .average(16px, 50px); // "call" the mixin
   padding: @average; // use its "return" value
 }
 
-div {
-  padding: 33px;
-}
+div { padding: 33px; }
 
 .mixin() {
   @size: in-mixin;
@@ -2780,9 +2557,7 @@ div {
 
 @size: globally-defined-value; // callers parent scope - no protection
 
-.class {
-  margin: in-mixin in-mixin;
-}
+.class { margin: in-mixin in-mixin; }
 
 .unlock(@value) {
   // outer mixin
@@ -2797,9 +2572,7 @@ div {
   .doSomething(); //nested mixin was copied here and is usable
 }
 
-#namespace {
-  declaration: 5;
-}
+#namespace { declaration: 5; }
 
 // declare detached ruleset
 @detached-ruleset: {
@@ -2807,21 +2580,15 @@ div {
 };
 
 // use detached ruleset
-.top {
-  @detached-ruleset();
-}
+.top { @detached-ruleset(); }
 
-.top {
-  background: red;
-}
+.top { background: red; }
 
 .desktop-and-old-ie(@rules) {
   @media screen and (min-width: 1200px) {
     @rules();
   }
-  html.lt-ie9 & {
-    @rules();
-  }
+  html.lt-ie9 & { @rules(); }
 }
 
 header {
@@ -2832,22 +2599,14 @@ header {
   });
 }
 
-header {
-  background-color: blue;
-}
+header { background-color: blue; }
 @media screen and (min-width: 1200px) {
-  header {
-    background-color: red;
-  }
+  header { background-color: red; }
 }
-html.lt-ie9 header {
-  background-color: red;
-}
+html.lt-ie9 header { background-color: red; }
 
 @my-ruleset: {
-  .my-selector {
-    background-color: black;
-  }
+  .my-selector { background-color: black; }
 };
 
 @my-ruleset: {
@@ -2862,16 +2621,12 @@ html.lt-ie9 header {
 }
 
 @media (orientation: portrait) and tv {
-  .my-selector {
-    background-color: black;
-  }
+  .my-selector { background-color: black; }
 }
 
 // detached ruleset with a mixin
 @detached-ruleset: {
-  .mixin() {
-    color: blue;
-  }
+  .mixin() { color: blue; }
 };
 // call detached ruleset
 .caller {
@@ -2879,9 +2634,7 @@ html.lt-ie9 header {
   .mixin();
 }
 
-.caller {
-  color: blue;
-}
+.caller { color: blue; }
 
 @detached-ruleset: {
   @color: blue; // this variable is private
@@ -2901,9 +2654,7 @@ selector {
 
   // define variable and mixin needed inside the detached ruleset
   @caller-variable: value;
-  .caller-mixin() {
-    variable: declaration;
-  }
+  .caller-mixin() { variable: declaration; }
 }
 
 selector {
@@ -2923,9 +2674,7 @@ selector {
   @variable: value; // variable defined in caller - will be ignored
 }
 
-selector {
-  variable: global;
-}
+selector { variable: global; }
 
 @detached-1: {
   scope-detached: @one @two;
@@ -2961,9 +2710,7 @@ selector {
   @detached();
 }
 
-.use-place {
-  scope-detached: value;
-}
+.use-place { scope-detached: value; }
 
 @my-ruleset: {
   .my-selector {
@@ -2973,9 +2720,7 @@ selector {
   }
 };
 
-.foo {
-  background: #900;
-}
+.foo { background: #900; }
 @import "this-is-valid.less";
 
 @import "foo"; // foo.less is imported
@@ -2983,8 +2728,7 @@ selector {
 @import "foo.php"; // foo.php imported as a less file
 @import "foo.css"; // statement left in place, as-is
 
-.navbar:extend(.navbar all) {
-}
+.navbar:extend(.navbar all) { }
 
 @import (less) "foo.css";
 
@@ -2996,36 +2740,20 @@ selector {
 @import (once) "foo.less"; // this statement will be ignored
 
 // file: foo.less
-.a {
-  color: green;
-}
+.a { color: green; }
 // file: main.less
 @import (multiple) "foo.less";
 @import (multiple) "foo.less";
 
-.a {
-  color: green;
-}
-.a {
-  color: green;
-}
+.a { color: green; }
+.a { color: green; }
 
-.mixin (@a) when (lightness(@a) >= 50%) {
-  background-color: black;
-}
-.mixin (@a) when (lightness(@a) < 50%) {
-  background-color: white;
-}
-.mixin (@a) {
-  color: @a;
-}
+.mixin (@a) when (lightness(@a) >= 50%) { background-color: black; }
+.mixin (@a) when (lightness(@a) < 50%) { background-color: white; }
+.mixin (@a) { color: @a; }
 
-.class1 {
-  .mixin(#ddd);
-}
-.class2 {
-  .mixin(#555);
-}
+.class1 { .mixin(#ddd); }
+.class2 { .mixin(#555); }
 
 .class1 {
   background-color: black;
@@ -3036,12 +2764,8 @@ selector {
   color: #555;
 }
 
-.truth (@a) when (@a) {
-  /* ... */
-}
-.truth (@a) when (@a = true) {
-  /* ... */
-}
+.truth (@a) when (@a) { /* ... */ }
+.truth (@a) when (@a = true) { /* ... */ }
 
 .class {
   .truth(40); // Will not match any of the above definitions.
@@ -3049,64 +2773,37 @@ selector {
 
 @media: mobile;
 
-.mixin (@a) when (@media = mobile) {
-  /* ... */
-}
-.mixin (@a) when (@media = desktop) {
-  /* ... */
-}
+.mixin (@a) when (@media = mobile) { /* ... */ }
+.mixin (@a) when (@media = desktop) { /* ... */ }
 
-.max (@a; @b) when (@a > @b) {
-  width: @a;
-}
-.max (@a; @b) when (@a < @b) {
-  width: @b;
-}
+.max (@a; @b) when (@a > @b) { width: @a; }
+.max (@a; @b) when (@a < @b) { width: @b; }
 
-.mixin (@a) when (isnumber(@a)) and (@a > 0) {
-  /* ... */
-}
+.mixin (@a) when (isnumber(@a)) and (@a > 0) { /* ... */ }
 
-.mixin (@a) when (@a > 10), (@a < -10) {
-  /* ... */
-}
+.mixin (@a) when (@a > 10), (@a < -10) { /* ... */ }
 
-.mixin (@b) when not (@b > 0) {
-  /* ... */
-}
+.mixin (@b) when not (@b > 0) { /* ... */ }
 
-.mixin (@a; @b: 0) when (isnumber(@b)) {
-  /* ... */
-}
-.mixin (@a; @b: black) when (iscolor(@b)) {
-  /* ... */
-}
+.mixin (@a; @b: 0) when (isnumber(@b)) { /* ... */ }
+.mixin (@a; @b: black) when (iscolor(@b)) { /* ... */ }
 
-.mixin (@a) when (@a > 0) {
-  /* ... */
-}
-.mixin (@a) when (default()) {
-  /* ... */
-} // matches only if first mixin does not, i.e. when @a <= 0
+.mixin (@a) when (@a > 0) { /* ... */ }
+.mixin
+  (@a)
+  when
+  (default()) { /* ... */ } // matches only if first mixin does not, i.e. when @a <= 0
 
 .my-optional-style() when (@my-option = true) {
-  button {
-    color: white;
-  }
+  button { color: white; }
 }
 .my-optional-style();
 
-button when (@my-option = true) {
-  color: white;
-}
+button when (@my-option = true) { color: white; }
 
 & when (@my-option = true) {
-  button {
-    color: white;
-  }
-  a {
-    color: blue;
-  }
+  button { color: white; }
+  a { color: blue; }
 }
 
 .loop(@counter) when (@counter > 0) {
@@ -3129,187 +2826,112 @@ div {
 .generate-columns(4);
 
 .generate-columns(@n, @i: 1) when (@i =< @n) {
-  .column-@{i} {
-    width: (@i * 100% / @n);
-  }
+  .column-@{i} { width: (@i * 100% / @n); }
   .generate-columns(@n, (@i + 1));
 }
 
-.column-1 {
-  width: 25%;
-}
-.column-2 {
-  width: 50%;
-}
-.column-3 {
-  width: 75%;
-}
-.column-4 {
-  width: 100%;
-}
+.column-1 { width: 25%; }
+.column-2 { width: 50%; }
+.column-3 { width: 75%; }
+.column-4 { width: 100%; }
 
-.mixin() {
-  box-shadow+: inset 0 0 10px #555;
-}
+.mixin() { box-shadow+: inset 0 0 10px #555; }
 .myclass {
   .mixin();
   box-shadow+: 0 0 20px black;
 }
 
-.myclass {
-  box-shadow: inset 0 0 10px #555, 0 0 20px black;
-}
+.myclass { box-shadow: inset 0 0 10px #555, 0 0 20px black; }
 
-.mixin() {
-  transform+_: scale(2);
-}
+.mixin() { transform+_: scale(2); }
 .myclass {
   .mixin();
   transform+_: rotate(15deg);
 }
 
-.myclass {
-  transform: scale(2) rotate(15deg);
-}
+.myclass { transform: scale(2) rotate(15deg); }
 
 a {
   color: blue;
-  &:hover {
-    color: green;
-  }
+  &:hover { color: green; }
 }
 
-a {
-  color: blue;
-}
+a { color: blue; }
 
-a:hover {
-  color: green;
-}
+a:hover { color: green; }
 
 .button {
-  &-ok {
-    background-image: url("ok.png");
-  }
-  &-cancel {
-    background-image: url("cancel.png");
-  }
+  &-ok { background-image: url("ok.png"); }
+  &-cancel { background-image: url("cancel.png"); }
 
-  &-custom {
-    background-image: url("custom.png");
-  }
+  &-custom { background-image: url("custom.png"); }
 }
 
-.button-ok {
-  background-image: url("ok.png");
-}
-.button-cancel {
-  background-image: url("cancel.png");
-}
-.button-custom {
-  background-image: url("custom.png");
-}
+.button-ok { background-image: url("ok.png"); }
+.button-cancel { background-image: url("cancel.png"); }
+.button-custom { background-image: url("custom.png"); }
 
 .link {
-  & + & {
-    color: red;
-  }
+  & + & { color: red; }
 
-  & & {
-    color: green;
-  }
+  & & { color: green; }
 
-  && {
-    color: blue;
-  }
+  && { color: blue; }
 
   &,
-  &ish {
-    color: cyan;
-  }
+  &ish { color: cyan; }
 }
 
-.link + .link {
-  color: red;
-}
-.link .link {
-  color: green;
-}
-.link.link {
-  color: blue;
-}
+.link + .link { color: red; }
+.link .link { color: green; }
+.link.link { color: blue; }
 .link,
-.linkish {
-  color: cyan;
-}
+.linkish { color: cyan; }
 
 .grand {
   .parent {
-    & > & {
-      color: red;
-    }
+    & > & { color: red; }
 
-    & & {
-      color: green;
-    }
+    & & { color: green; }
 
-    && {
-      color: blue;
-    }
+    && { color: blue; }
 
     &,
-    &ish {
-      color: cyan;
-    }
+    &ish { color: cyan; }
   }
 }
 
-.grand .parent > .grand .parent {
-  color: red;
-}
-.grand .parent .grand .parent {
-  color: green;
-}
-.grand .parent.grand .parent {
-  color: blue;
-}
+.grand .parent > .grand .parent { color: red; }
+.grand .parent .grand .parent { color: green; }
+.grand .parent.grand .parent { color: blue; }
 .grand .parent,
-.grand .parentish {
-  color: cyan;
-}
+.grand .parentish { color: cyan; }
 
 .header {
   .menu {
     border-radius: 5px;
-    .no-borderradius & {
-      background-image: url("images/button-background.png");
-    }
+    .no-borderradius
+      & { background-image: url("images/button-background.png"); }
   }
 }
 
-.header .menu {
-  border-radius: 5px;
-}
-.no-borderradius .header .menu {
-  background-image: url("images/button-background.png");
-}
+.header .menu { border-radius: 5px; }
+.no-borderradius
+  .header
+  .menu { background-image: url("images/button-background.png"); }
 
 p,
 a,
 ul,
 li {
   border-top: 2px dotted #366;
-  & + & {
-    border-top: 0;
-  }
+  & + & { border-top: 0; }
 }
 
 p,
 a,
 ul,
-li {
-  border-top: 2px dotted #366;
-}
+li { border-top: 2px dotted #366; }
 p + p,
 p + a,
 p + ul,
@@ -3325,19 +2947,14 @@ ul + li,
 li + p,
 li + a,
 li + ul,
-li + li {
-  border-top: 0;
-}
+li + li { border-top: 0; }
 
-.foobar {
-  &:extend(.foo);
-}
+.foobar { &:extend(.foo); }
 
 .thing {
   &:hover {
     background-color: blue;
-    .thing-child {
-    }
+    .thing-child { }
   }
 }
 
@@ -3354,9 +2971,7 @@ li + li {
 [href]:hover &, // Comment'
 [href]:focus &, // Comment"
 [href]:active & {
-  .tooltip {
-    opacity: 1;
-  }
+  .tooltip { opacity: 1; }
 }
 
 // Usage
@@ -3364,13 +2979,9 @@ li + li {
   "@{themes}/tidal-wave.less";
 
 // Mixin with escaped /
-.margin-bottom-1\\/3() {
-  margin-bottom: 0.8rem;
-}
+.margin-bottom-1\\/3() { margin-bottom: 0.8rem; }
 
-label {
-  .margin-bottom-1\\/3;
-}
+label { .margin-bottom-1\\/3; }
 
 // whitespace between variable and colon, #2925 #4090
 @FoO: bar;
@@ -3415,39 +3026,23 @@ printWidth: 80
 =====================================output=====================================
 // Animation
 // '
-.a {
-  color: red;
-}
+.a { color: red; }
 
-.aa:hover::after {
-  content: '"';
-} // "
+.aa:hover::after { content: '"'; } // "
 
-.b {
-  background: url(http://example.com);
-}
-.b::after {
-  content: "a";
-}
+.b { background: url(http://example.com); }
+.b::after { content: "a"; }
 
-.bb {
-  background: url("http://example.com/(foo)bar");
-}
-.bb::after {
-  content: "'a";
-} // """
+.bb { background: url("http://example.com/(foo)bar"); }
+.bb::after { content: "'a"; } // """
 
 // Animation   !
-.c {
-  color: red;
-}
+.c { color: red; }
 
 .d {
   color: red; /* // */
 }
-.d::after {
-  content: "'";
-}
+.d::after { content: "'"; }
 
 /*        fff
    //   */
@@ -3456,10 +3051,8 @@ printWidth: 80
   content: "'''";
 }
 
-[href]:active {
-  opacity: // '!' "?"
-    1;
-}
+[href]:active { opacity: // '!' "?"
+    1; }
 
 ================================================================================
 `;

@@ -78,9 +78,7 @@ printWidth: 80
     margin: 0;
     background: #eee;
 
-    &:first-child {
-      margin-left: 0;
-    }
+    &:first-child { margin-left: 0; }
   }
 
   &__link {

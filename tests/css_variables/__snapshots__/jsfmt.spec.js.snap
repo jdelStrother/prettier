@@ -28,9 +28,7 @@ printWidth: 80
 }
 
 @supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
+  body { color: var(--varName); }
 }
 
 ================================================================================
@@ -66,9 +64,7 @@ printWidth: 80
 }
 
 @supports (--#{$prop}: green) {
-  body {
-    color: var(--#{$var});
-  }
+  body { color: var(--#{$var}); }
 }
 
 ================================================================================

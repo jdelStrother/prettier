@@ -1164,12 +1164,8 @@ label {
 =====================================output=====================================
 @media #{$g-breakpoint-tiny} {
 }
-.#{$fa-css-prefix}-glass:before {
-  content: $fa-var-glass;
-}
-a {
-  height: calc(#{$foo} + 1);
-}
+.#{$fa-css-prefix}-glass:before { content: $fa-var-glass; }
+a { height: calc(#{$foo} + 1); }
 div {
   background: {
     size: auto 60%;
@@ -1455,18 +1451,12 @@ $space-scale: (0, "0") (0.25, "0-25") (0.5, "0-5") (0.75, "0-75") (1, "1")
   }
 
   @include breakpoint(getBp(md)) {
-    &:nth-child(2n + 3) {
-      clear: both;
-    }
+    &:nth-child(2n + 3) { clear: both; }
   }
 
   @include breakpoint(getBp(xl)) {
-    &:nth-child(2n + 3) {
-      clear: none;
-    }
-    &:nth-child(3n + 4) {
-      clear: both;
-    }
+    &:nth-child(2n + 3) { clear: none; }
+    &:nth-child(3n + 4) { clear: both; }
   }
 }
 
@@ -1486,18 +1476,12 @@ $space-scale: (0, "0") (0.25, "0-25") (0.5, "0-5") (0.75, "0-75") (1, "1")
 $buttonConfig: "save" 50px, "cancel" 50px, "help" 100px;
 
 $locale: "en_us";
-html[lang="#{$locale}"] {
-  font-size: 10px;
-}
+html[lang="#{$locale}"] { font-size: 10px; }
 $alertClass: "error";
-p.message-#{$alertClass} {
-  color: red;
-}
+p.message-#{$alertClass} { color: red; }
 $mediumBreakpoint: 768px;
 @media (max-width: #{$mediumBreakpoint}) {
-  a {
-    font-size: 18px;
-  }
+  a { font-size: 18px; }
 }
 
 p {
@@ -1510,21 +1494,15 @@ p {
   }
 }
 
-.popularAnimal {
-  background: gray;
-}
-.GoodBoy {
-  color: green;
-}
+.popularAnimal { background: gray; }
+.GoodBoy { color: green; }
 .dog {
   @extend .popularAnimal;
   @extend .GoodBoy;
   color: white;
 }
 
-%animal {
-  background: gray;
-}
+%animal { background: gray; }
 .cat {
   @extend %animal;
   color: white;
@@ -1554,28 +1532,18 @@ p {
 }
 
 a {
-  &:hover {
-    color: red;
-  }
+  &:hover { color: red; }
 }
 p {
-  body.no-touch & {
-    display: none;
-  }
+  body.no-touch & { display: none; }
 }
 .foo.bar .baz.bang,
-.bip.qux {
-  $selector: &;
-}
+.bip.qux { $selector: &; }
 @mixin does-parent-exist {
   @if & {
-    &:hover {
-      color: red;
-    }
+    &:hover { color: red; }
   } @else {
-    a {
-      color: red;
-    }
+    a { color: red; }
   }
 }
 
@@ -1609,24 +1577,18 @@ p {
 }
 
 @for $i from 1 through 3 {
-  .item-#{$i} {
-    width: 2em * $i;
-  }
+  .item-#{$i} { width: 2em * $i; }
 }
 
 @each $animal in puma, sea-slug, cheerfulDog, BigSalamander, "string",
   "another-string", "camelCaseString", "PascalCaseString"
 {
-  .#{$animal}-icon {
-    background-image: url("/images/#{$animal}.png");
-  }
+  .#{$animal}-icon { background-image: url("/images/#{$animal}.png"); }
 }
 
 $i: 6;
 @while $i > 0 {
-  .item-#{$i} {
-    width: 2em * $i;
-  }
+  .item-#{$i} { width: 2em * $i; }
   $i: $i - 2;
 }
 
@@ -1634,77 +1596,55 @@ $i: 6;
   border: $width $coolStyle $AwesomeColor;
 }
 
-p {
-  @include cool-border(1px, "solid", $fff);
-}
-p {
-  @include cool-border($width: 1px, $coolStyle: "solid", $AwesomeColor: #fff);
-}
-p {
-  @include coolBorder();
-}
+p { @include cool-border(1px, "solid", $fff); }
+p { @include cool-border(
+    $width: 1px,
+    $coolStyle: "solid",
+    $AwesomeColor: #fff
+  ); }
+p { @include coolBorder(); }
 
 @mixin coolBorder() {
   border: 10px solid #fff;
 }
-p {
-  @include coolBorder(1px, "solid", $fff);
-}
+p { @include coolBorder(1px, "solid", $fff); }
 
 @mixin CoolBorder() {
   border: 10px solid #fff;
 }
-p {
-  @include CoolBorder(1px, "solid", $fff);
-}
+p { @include CoolBorder(1px, "solid", $fff); }
 
 @mixin box-shadow($shadows...) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
   box-shadow: $shadows;
 }
-.shadows {
-  @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
-}
+.shadows { @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999); }
 
 @mixin apply-to-ie6-only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include apply-to-ie6-only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin applyToIe6Only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include applyToIe6Only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin ApplyToIe6Only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include ApplyToIe6Only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin config-icon-colors($prefix, $colors...) {
   @each $i in $colors {
-    .#{$prefix}#{nth($i, 1)} {
-      color: nth($i, 2);
-    }
+    .#{$prefix}#{nth($i, 1)} { color: nth($i, 2); }
   }
 }
 @include config-icon-colors(
@@ -1776,13 +1716,10 @@ $lg-and-up: "(min-width: 1200px)";
 
 .selector {
   foo: bar;
-  #{$active} {
-    baz: qux;
-  }
+  #{$active} { baz: qux; }
 }
 
-.el:nth-of-type(#{$i}) {
-}
+.el:nth-of-type(#{$i}) { }
 
 @media #{$value} {
 }
@@ -1790,30 +1727,26 @@ $lg-and-up: "(min-width: 1200px)";
 @import url(#{$foundation-dir}/foundation/components/grid);
 
 @keyframes loader {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, 0, 0); }
 
-  #{50% - $loader-icon-duration} {
-    transform: translate3d(0, $bounce-height, 0);
-  }
+  #{50% - $loader-icon-duration} { transform: translate3d(
+      0,
+      $bounce-height,
+      0
+    ); }
 
-  50% {
-    transform: translate3d(0, $bounce-height, 0)
+  50% { transform: translate3d(0, $bounce-height, 0)
       scale(
         $loader-bounce-horizontal-expansion,
         $loader-bounce-vertical-compression
-      );
-  }
+      ); }
 }
 
 $icons: wifi "\\600", wifi-hotspot "\\601", weather "\\602";
 
 @each $icon in $icons {
   .icon-#{nth($icon, 1)},
-  %icon-#{nth($icon, 1)} {
-    content: "#{nth($icon, 2)}";
-  }
+  %icon-#{nth($icon, 1)} { content: "#{nth($icon, 2)}"; }
 }
 
 .foo {
@@ -1883,9 +1816,7 @@ a:nth-child(#{$numPerRow}n) {
   @extend %#{$item};
 }
 
-.icon-#{$icon-name} {
-  background-image: "/images/#{$icon-name}.svg";
-}
+.icon-#{$icon-name} { background-image: "/images/#{$icon-name}.svg"; }
 
 $extmods: (
   eot: "?",
@@ -1938,8 +1869,7 @@ $colors: (
 
 $widths-breakpoint-separator: \\@small;
 
-a {
-  transition-timing-function: func1(
+a { transition-timing-function: func1(
     func2(
       func3(
         "veryVeryVeryVeryVeryLongValue",
@@ -1959,8 +1889,7 @@ a {
       "veryVeryVeryVeryVeryLongValue",
       "veryVeryVeryVeryVeryLongValue"
     )
-  );
-}
+  ); }
 
 $empty-map: ();
 $empty-nested-map: (
@@ -2088,9 +2017,7 @@ $my-map: (
 [href]:hover &, // Comment
 [href]:focus &, // Comment
 [href]:active & {
-  .tooltip {
-    opacity: 1;
-  }
+  .tooltip { opacity: 1; }
 }
 
 @import // Comment
@@ -2104,9 +2031,7 @@ $my-map: (
   "tabs";
 
 @mixin placeholder {
-  &::placeholder {
-    @content;
-  }
+  &::placeholder { @content; }
 }
 
 .container {
@@ -2115,18 +2040,14 @@ $my-map: (
   }
 }
 
-.something {
-  grid-template-columns: 1 2fr (3 + 4);
-}
+.something { grid-template-columns: 1 2fr (3 + 4); }
 
 // Ignore escape "\\" in SCSS mixins
 @mixin margin-bottom-1\\/3 {
   margin-bottom: 0.8rem;
 }
 
-label {
-  @include margin-bottom-1\\/3;
-}
+label { @include margin-bottom-1\\/3; }
 
 ================================================================================
 `;
@@ -3192,12 +3113,8 @@ label {
 =====================================output=====================================
 @media #{$g-breakpoint-tiny} {
 }
-.#{$fa-css-prefix}-glass:before {
-  content: $fa-var-glass;
-}
-a {
-  height: calc(#{$foo} + 1);
-}
+.#{$fa-css-prefix}-glass:before { content: $fa-var-glass; }
+a { height: calc(#{$foo} + 1); }
 div {
   background: {
     size: auto 60%;
@@ -3483,18 +3400,12 @@ $space-scale: (0, "0") (0.25, "0-25") (0.5, "0-5") (0.75, "0-75") (1, "1")
   }
 
   @include breakpoint(getBp(md)) {
-    &:nth-child(2n + 3) {
-      clear: both;
-    }
+    &:nth-child(2n + 3) { clear: both; }
   }
 
   @include breakpoint(getBp(xl)) {
-    &:nth-child(2n + 3) {
-      clear: none;
-    }
-    &:nth-child(3n + 4) {
-      clear: both;
-    }
+    &:nth-child(2n + 3) { clear: none; }
+    &:nth-child(3n + 4) { clear: both; }
   }
 }
 
@@ -3514,18 +3425,12 @@ $space-scale: (0, "0") (0.25, "0-25") (0.5, "0-5") (0.75, "0-75") (1, "1")
 $buttonConfig: "save" 50px, "cancel" 50px, "help" 100px;
 
 $locale: "en_us";
-html[lang="#{$locale}"] {
-  font-size: 10px;
-}
+html[lang="#{$locale}"] { font-size: 10px; }
 $alertClass: "error";
-p.message-#{$alertClass} {
-  color: red;
-}
+p.message-#{$alertClass} { color: red; }
 $mediumBreakpoint: 768px;
 @media (max-width: #{$mediumBreakpoint}) {
-  a {
-    font-size: 18px;
-  }
+  a { font-size: 18px; }
 }
 
 p {
@@ -3538,21 +3443,15 @@ p {
   }
 }
 
-.popularAnimal {
-  background: gray;
-}
-.GoodBoy {
-  color: green;
-}
+.popularAnimal { background: gray; }
+.GoodBoy { color: green; }
 .dog {
   @extend .popularAnimal;
   @extend .GoodBoy;
   color: white;
 }
 
-%animal {
-  background: gray;
-}
+%animal { background: gray; }
 .cat {
   @extend %animal;
   color: white;
@@ -3582,28 +3481,18 @@ p {
 }
 
 a {
-  &:hover {
-    color: red;
-  }
+  &:hover { color: red; }
 }
 p {
-  body.no-touch & {
-    display: none;
-  }
+  body.no-touch & { display: none; }
 }
 .foo.bar .baz.bang,
-.bip.qux {
-  $selector: &;
-}
+.bip.qux { $selector: &; }
 @mixin does-parent-exist {
   @if & {
-    &:hover {
-      color: red;
-    }
+    &:hover { color: red; }
   } @else {
-    a {
-      color: red;
-    }
+    a { color: red; }
   }
 }
 
@@ -3637,24 +3526,18 @@ p {
 }
 
 @for $i from 1 through 3 {
-  .item-#{$i} {
-    width: 2em * $i;
-  }
+  .item-#{$i} { width: 2em * $i; }
 }
 
 @each $animal in puma, sea-slug, cheerfulDog, BigSalamander, "string",
   "another-string", "camelCaseString", "PascalCaseString"
 {
-  .#{$animal}-icon {
-    background-image: url("/images/#{$animal}.png");
-  }
+  .#{$animal}-icon { background-image: url("/images/#{$animal}.png"); }
 }
 
 $i: 6;
 @while $i > 0 {
-  .item-#{$i} {
-    width: 2em * $i;
-  }
+  .item-#{$i} { width: 2em * $i; }
   $i: $i - 2;
 }
 
@@ -3662,77 +3545,55 @@ $i: 6;
   border: $width $coolStyle $AwesomeColor;
 }
 
-p {
-  @include cool-border(1px, "solid", $fff);
-}
-p {
-  @include cool-border($width: 1px, $coolStyle: "solid", $AwesomeColor: #fff);
-}
-p {
-  @include coolBorder();
-}
+p { @include cool-border(1px, "solid", $fff); }
+p { @include cool-border(
+    $width: 1px,
+    $coolStyle: "solid",
+    $AwesomeColor: #fff
+  ); }
+p { @include coolBorder(); }
 
 @mixin coolBorder() {
   border: 10px solid #fff;
 }
-p {
-  @include coolBorder(1px, "solid", $fff);
-}
+p { @include coolBorder(1px, "solid", $fff); }
 
 @mixin CoolBorder() {
   border: 10px solid #fff;
 }
-p {
-  @include CoolBorder(1px, "solid", $fff);
-}
+p { @include CoolBorder(1px, "solid", $fff); }
 
 @mixin box-shadow($shadows...) {
   -moz-box-shadow: $shadows;
   -webkit-box-shadow: $shadows;
   box-shadow: $shadows;
 }
-.shadows {
-  @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
-}
+.shadows { @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999); }
 
 @mixin apply-to-ie6-only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include apply-to-ie6-only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin applyToIe6Only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include applyToIe6Only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin ApplyToIe6Only {
-  * html {
-    @content;
-  }
+  * html { @content; }
 }
 @include ApplyToIe6Only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+  #logo { background-image: url(/logo.gif); }
 }
 
 @mixin config-icon-colors($prefix, $colors...) {
   @each $i in $colors {
-    .#{$prefix}#{nth($i, 1)} {
-      color: nth($i, 2);
-    }
+    .#{$prefix}#{nth($i, 1)} { color: nth($i, 2); }
   }
 }
 @include config-icon-colors(
@@ -3804,13 +3665,10 @@ $lg-and-up: "(min-width: 1200px)";
 
 .selector {
   foo: bar;
-  #{$active} {
-    baz: qux;
-  }
+  #{$active} { baz: qux; }
 }
 
-.el:nth-of-type(#{$i}) {
-}
+.el:nth-of-type(#{$i}) { }
 
 @media #{$value} {
 }
@@ -3818,30 +3676,26 @@ $lg-and-up: "(min-width: 1200px)";
 @import url(#{$foundation-dir}/foundation/components/grid);
 
 @keyframes loader {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, 0, 0); }
 
-  #{50% - $loader-icon-duration} {
-    transform: translate3d(0, $bounce-height, 0);
-  }
+  #{50% - $loader-icon-duration} { transform: translate3d(
+      0,
+      $bounce-height,
+      0
+    ); }
 
-  50% {
-    transform: translate3d(0, $bounce-height, 0)
+  50% { transform: translate3d(0, $bounce-height, 0)
       scale(
         $loader-bounce-horizontal-expansion,
         $loader-bounce-vertical-compression
-      );
-  }
+      ); }
 }
 
 $icons: wifi "\\600", wifi-hotspot "\\601", weather "\\602";
 
 @each $icon in $icons {
   .icon-#{nth($icon, 1)},
-  %icon-#{nth($icon, 1)} {
-    content: "#{nth($icon, 2)}";
-  }
+  %icon-#{nth($icon, 1)} { content: "#{nth($icon, 2)}"; }
 }
 
 .foo {
@@ -3911,9 +3765,7 @@ a:nth-child(#{$numPerRow}n) {
   @extend %#{$item};
 }
 
-.icon-#{$icon-name} {
-  background-image: "/images/#{$icon-name}.svg";
-}
+.icon-#{$icon-name} { background-image: "/images/#{$icon-name}.svg"; }
 
 $extmods: (
   eot: "?",
@@ -3966,8 +3818,7 @@ $colors: (
 
 $widths-breakpoint-separator: \\@small;
 
-a {
-  transition-timing-function: func1(
+a { transition-timing-function: func1(
     func2(
       func3(
         "veryVeryVeryVeryVeryLongValue",
@@ -3987,8 +3838,7 @@ a {
       "veryVeryVeryVeryVeryLongValue",
       "veryVeryVeryVeryVeryLongValue"
     )
-  );
-}
+  ); }
 
 $empty-map: ();
 $empty-nested-map: (
@@ -4116,9 +3966,7 @@ $my-map: (
 [href]:hover &, // Comment
 [href]:focus &, // Comment
 [href]:active & {
-  .tooltip {
-    opacity: 1;
-  }
+  .tooltip { opacity: 1; }
 }
 
 @import // Comment
@@ -4132,9 +3980,7 @@ $my-map: (
   "tabs";
 
 @mixin placeholder {
-  &::placeholder {
-    @content;
-  }
+  &::placeholder { @content; }
 }
 
 .container {
@@ -4143,18 +3989,14 @@ $my-map: (
   }
 }
 
-.something {
-  grid-template-columns: 1 2fr (3 + 4);
-}
+.something { grid-template-columns: 1 2fr (3 + 4); }
 
 // Ignore escape "\\" in SCSS mixins
 @mixin margin-bottom-1\\/3 {
   margin-bottom: 0.8rem;
 }
 
-label {
-  @include margin-bottom-1\\/3;
-}
+label { @include margin-bottom-1\\/3; }
 
 ================================================================================
 `;

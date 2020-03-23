@@ -33,13 +33,9 @@ vueIndentScriptAndStyle: true
 =====================================output=====================================
 <template>
   <style>
-    br {
-      background: #00abc9;
-    }
+    br { background: #00abc9; }
 
-    div {
-      background: #00abc9;
-    }
+    div { background: #00abc9; }
   </style>
 
   <script>
@@ -90,13 +86,9 @@ vueIndentScriptAndStyle: false
 =====================================output=====================================
 <template>
   <style>
-    br {
-      background: #00abc9;
-    }
+    br { background: #00abc9; }
 
-    div {
-      background: #00abc9;
-    }
+    div { background: #00abc9; }
   </style>
 
   <script>
@@ -151,13 +143,9 @@ footer {
 </script>
 
 <style lang="scss">
-  footer {
-    background: #00abc9;
-  }
+  footer { background: #00abc9; }
 
-  footer {
-    background: #00abc9;
-  }
+  footer { background: #00abc9; }
 </style>
 
 <template>
@@ -208,13 +196,9 @@ console.log("hello");
 </script>
 
 <style lang="scss">
-footer {
-  background: #00abc9;
-}
+footer { background: #00abc9; }
 
-footer {
-  background: #00abc9;
-}
+footer { background: #00abc9; }
 </style>
 
 <template>

@@ -18,9 +18,7 @@ printWidth: 80
 
 @import "./components";
 @import "./themes";
-.class {
-  float: left;
-}
+.class { float: left; }
 
 ================================================================================
 `;

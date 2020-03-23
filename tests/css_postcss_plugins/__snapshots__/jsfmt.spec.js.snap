@@ -40,9 +40,7 @@ a {
 }
 
 =====================================output=====================================
-a {
-  @mixin $(theme)-colors;
-}
+a { @mixin $(theme)-colors; }
 
 @define-mixin icon $network, $color: blue {
   .icon.is-$(network) {
@@ -62,9 +60,7 @@ a {
   background: url(youtube.png);
 }
 
-.search {
-  @mixin icon search;
-}
+.search { @mixin icon search; }
 
 a {
   color: black;
@@ -104,13 +100,9 @@ printWidth: 80
     @media (max-width: 500px) {
       width: auto;
     }
-    body.is_dark & {
-      color: white;
-    }
+    body.is_dark & { color: white; }
   }
-  img {
-    display: block;
-  }
+  img { display: block; }
 }
 
 ================================================================================
@@ -421,9 +413,7 @@ b {
   & d {
     order: 2;
     & e,
-    & f {
-      order: 3;
-    }
+    & f { order: 3; }
     order: 4;
   }
   order: 5;
@@ -443,21 +433,15 @@ b {
 
 a {
   & b {
-    & c {
-      order: 1;
-    }
+    & c { order: 1; }
   }
 }
 d {
   order: 2;
-  & e {
-    order: 3;
-  }
+  & e { order: 3; }
 }
 f {
-  & g {
-    order: 4;
-  }
+  & g { order: 4; }
   order: 5;
 }
 a {
@@ -484,20 +468,12 @@ a,
 b {
   order: 1;
   c,
-  d {
-    order: 2;
-  }
+  d { order: 2; }
 }
-& e {
-  order: 3;
-}
+& e { order: 3; }
 f {
-  & g & {
-    order: 4;
-  }
-  &h {
-    order: 5;
-  }
+  & g & { order: 4; }
+  &h { order: 5; }
 }
 a,
 b {
@@ -534,9 +510,7 @@ a {
   @media screen, print and speech {
     @media (max-width: 300px), (min-aspect-ratio: 16/9) {
       order: 5;
-      & c {
-        order: 6;
-      }
+      & c { order: 6; }
     }
   }
 }

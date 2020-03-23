@@ -2411,31 +2411,21 @@ trailingComma: "none"
 <script></script>
 
 <style>
-#foo1 {
-  color: #f00;
-}
+#foo1 { color: #f00; }
 </style>
 <style scoped>
-#foo2 {
-  color: #f00;
-}
+#foo2 { color: #f00; }
 </style>
 
 <style lang="css">
-#foo3 {
-  color: #f00;
-}
+#foo3 { color: #f00; }
 </style>
 <style lang="css" scoped>
-#foo4 {
-  color: #f00;
-}
+#foo4 { color: #f00; }
 </style>
 
 <style lang="less">
-#foo5 {
-  color: #f00;
-}
+#foo5 { color: #f00; }
 </style>
 <style lang="less" scoped>
 #foo6 {
@@ -2517,31 +2507,21 @@ printWidth: 80
 <script></script>
 
 <style>
-#foo1 {
-  color: #f00;
-}
+#foo1 { color: #f00; }
 </style>
 <style scoped>
-#foo2 {
-  color: #f00;
-}
+#foo2 { color: #f00; }
 </style>
 
 <style lang="css">
-#foo3 {
-  color: #f00;
-}
+#foo3 { color: #f00; }
 </style>
 <style lang="css" scoped>
-#foo4 {
-  color: #f00;
-}
+#foo4 { color: #f00; }
 </style>
 
 <style lang="less">
-#foo5 {
-  color: #f00;
-}
+#foo5 { color: #f00; }
 </style>
 <style lang="less" scoped>
 #foo6 {
@@ -2624,31 +2604,21 @@ semi: false
 <script></script>
 
 <style>
-#foo1 {
-  color: #f00;
-}
+#foo1 { color: #f00; }
 </style>
 <style scoped>
-#foo2 {
-  color: #f00;
-}
+#foo2 { color: #f00; }
 </style>
 
 <style lang="css">
-#foo3 {
-  color: #f00;
-}
+#foo3 { color: #f00; }
 </style>
 <style lang="css" scoped>
-#foo4 {
-  color: #f00;
-}
+#foo4 { color: #f00; }
 </style>
 
 <style lang="less">
-#foo5 {
-  color: #f00;
-}
+#foo5 { color: #f00; }
 </style>
 <style lang="less" scoped>
 #foo6 {

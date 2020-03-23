@@ -33,12 +33,8 @@ class     TestComponent {}
   </ul> \`,
   styles: [
     \`
-      :host {
-        color: red;
-      }
-      div {
-        background: blue;
-      }
+      :host { color: red; }
+      div { background: blue; }
     \`
   ]
 })
@@ -79,12 +75,8 @@ class     TestComponent {}
   </ul> \`,
   styles: [
     \`
-      :host {
-        color: red;
-      }
-      div {
-        background: blue;
-      }
+      :host { color: red; }
+      div { background: blue; }
     \`,
   ],
 })

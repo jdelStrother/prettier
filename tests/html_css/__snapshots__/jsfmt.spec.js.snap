@@ -43,18 +43,14 @@ printWidth: 80
   @nice-blue: #5B83AD;
   @light-blue: @nice-blue + #111;
 
-  #header {
-    color: @light-blue;
-  }
+  #header { color: @light-blue; }
 </style>
 
 <style lang="less">
   @nice-blue: #5b83ad;
   @light-blue: @nice-blue + #111;
 
-  #header {
-    color: @light-blue;
-  }
+  #header { color: @light-blue; }
 </style>
 
 ================================================================================
@@ -195,9 +191,7 @@ printWidth: 80
   <head>
     <title>Sample styled page</title>
     <style>
-      a {
-        color: red;
-      }
+      a { color: red; }
     </style>
     <style>
       body {
@@ -232,9 +226,7 @@ printWidth: 80
 
 =====================================output=====================================
 <style>
-  a {
-    color: red;
-  }
+  a { color: red; }
 </style>
 <style>
   h1 {

@@ -120,6 +120,7 @@ function genericPrint(path, options, print) {
       return isInlineComment ? text.trimEnd() : text;
     }
     case "css-rule": {
+      const nodeSeparator = singleLineRule(node) ? " " : hardline;
       return concat([
         path.call(print, "selector"),
         node.important ? " !important" : "",
@@ -133,10 +134,13 @@ function genericPrint(path, options, print) {
               "{",
               node.nodes.length > 0
                 ? indent(
-                    concat([hardline, printNodeSequence(path, options, print)])
+                    concat([
+                      nodeSeparator,
+                      printNodeSequence(path, options, print),
+                    ])
                   )
                 : "",
-              hardline,
+              nodeSeparator,
               "}",
               isDetachedRulesetDeclarationNode(node) ? ";" : "",
             ])
@@ -1014,6 +1018,28 @@ function printCssNumber(rawNumber) {
       // Remove trailing `.0`.
       .replace(/\.0(?=$|e)/, "")
   );
+}
+
+function singleLineRule(node) {
+  if (node.nodes.length === 0) {
+    // Collapse empty rules to `.foo { }`.
+    return true;
+  } else if (node.nodes.length > 1) {
+    // Spread rules with multiple declarations on multiple lines.
+    return false;
+  }
+  const child = node.nodes[0];
+  if (child.type === "css-decl" || child.type === "css-atrule") {
+    // Collapse rules containing a single declaration to `.foo { color: red }`.
+    // If the declaration contains sub-nodes (eg `.foo { margin: { left: 0; right: 0 } }`),
+    // that should use multiple lines.
+    return !child.nodes;
+  }
+  if (child.type === "css-comment") {
+    // Collapse rules containing a single block-comment to `.foo { /* comment */ }`.
+    return !child.inline && !child.raws.inline;
+  }
+  return false;
 }
 
 module.exports = {

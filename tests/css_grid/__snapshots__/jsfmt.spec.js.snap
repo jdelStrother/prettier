@@ -123,21 +123,17 @@ div {
 
 =====================================output=====================================
 /* quotes */
-div {
-  grid-template-areas:
+div { grid-template-areas:
     "header header"
     "main sidebar"
-    "footer footer";
-}
+    "footer footer"; }
 
 /* numbers */
-div {
-  grid-template-columns:
+div { grid-template-columns:
     [full-start] minmax(1.5em, 1fr)
     [main-start] minmax(0.4ch, 75ch)
     [main-end] minmax(1em, 1fr)
-    [full-end];
-}
+    [full-end]; }
 
 /* casing */
 div {
